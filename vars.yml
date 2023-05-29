@@ -1,0 +1,57 @@
+users:
+  - name: zafar
+    password: admin
+    group: zafar
+    state: present 
+    is_sudoer: true
+    groups: []
+    key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC42arHFiVoh45U0/bUbbX+KYBs7CbbKgD8zkJgbwUsShxkOxiUr5oMnZ1WO2loWYu1p42e8LVgRg+3bdk7h7y125Zh3XQA28JlreDXaZQhX0XJOfTy+L15AorLaxSmY7ya1Mc4DhiuAQ2gbylXYAFQTCtLZs1MTNBxdUQV6XJOFw4UHIRZosZZqMNGM5umtHPnfY0+cq2QIQA163wMC4uRxquysBZ3z78pxdyaObiIwjDmqEX0sPMqVoxZVVU59G76wSf7XmQuy+2MsbFlLkWMIoogeiZ7WE26txuYPaDEIhj4RTvhAAwf25mr5NbonW2huoBN2skj4EdONBABo8A74Qil/RShvfsWK5mhrouSmK0AlpshVuIJS6L8PxG8RN2suRPaJ1ExwAmkrNFkiMz1u2yfeBuDM0buiPhWpMMSYa2PpNdlMFtf6+iewBo4xFlCw1JBkQo3289mKxHKZQLkmKFzbZhyFp9toKkyHjOcUj2Tod8Wu1L4qhQF3ThQM4E= zafar@zafar-Laptop
+  - name: maruf
+    password: admin
+    group: maruf
+    state: present 
+    is_sudoer: true
+    groups: []
+    key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDdw/kkZE1lXCx5FjzBt82wBY6vMYbaHztEpaavWFTNmqHLy1kVjiBLbCyT/Szlc6ODhRIabeTcQ2+FR7VAgmNbrg/RWEKs/WfXYYwg7LgAjULKQywY8KuqNqYV757a7iV1SKjUiEO5dkS09+srPmRBpo8QLfo2PyuHH/S68pcGasiHwNmHpS2iMCj7Dma5Vhd1IWPu0970JareXMXwmjTsXh2HyZ49b4fr1dMJoal15PMwsw0MnqFy5RBl1aZScOBNW8lpAOQtsK5jgPaD+yq2lPYRlVpopEge4ZhSUJDnQ0tAn64Krl406TGM3T2v47Iut1L5s7SnJMJyoZLKL/vMxNpS38/SA57FKzBI1Ev2ivoLEHrTtlTlBPyaMBjeqtqQ2N/Qezsxnp7DoovkaVKd42nAiv+aUAkLRPzcmKSJiGAjozSxyIeknK8Le8wtSmMYSwI24PFHKZVLgCaRT3kmRm+FTlPD944IiHWT2vDHmMne8K6hzX9o3vyjqI+X28s= nginx@nginx
+  - name: jamol
+    password: admin
+    group: jamol
+    state: present 
+    is_sudoer: true
+    groups: []
+    key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCh5rA+UG9UiaBe+GtyznAOdpsHhMYkOGqPdzsMe515EoVS7QaGdj1m274YmaUAssR7NEKJHR+dAyLzt8uMz3eQQJG9W5DliyqxYq4YqhfF/I8DdMRhMN3aL45vVDTpQzRpWwxys3rImG0bpPn5RPs/aS8XUp5DRCrO77fOiUYF1RmObJI+9z49YKKlfVNiufk8zQfZaHiKgLJzbApMjegR1++YXXL9YJhOpsPnFngsFKvyIZBYxFxybn//veRjdtLO6aznKHGeurwScy9WWl5nPygx56IK8Jo4orcJuq0D+LccW60PfDXzpB5cfyCKQQxT/IM3hxAWxhmh2ivelibGP2+E5NGoJOT/RdA1JFwzrLO/sd+x7lldwjFrwzruwMbMk2cspwa8Nfk5j9v7IS4sU9cHs/28fQ10IR5FotQvWfRBB1s8YkL/7B/tbugSAigyXIGdfRdWNE3B7fSkEWdxwTBp5aJuICmDDYg3FTKbYUSCnVqkIYPou4l5wlhKhW0= jamoliddin@sword
+  - name: rustam
+    password: admin
+    group: rustam
+    state: present 
+    is_sudoer: true
+    groups: []
+    key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCoLdG4RiNFa7z9J6aWAFkkx80R69GNTpz2DAZP+oEWnDu/lIT0m2FFK5NfVv0gjd1t9PYyYhHRcfPIrUa3dAIb5T6m2otFjI99t6N2EAnH2/4jWh+R5pvdkg2sE7NDUG1tkC3mGK4LcvLSARV5lBPG+lSUypBiJq+By/rR/kvsjb8JHeFT1NoYR/OUF2xBjqWbMuVRn7yrDRp4q4wHFpGCWLWeGJGnqJr3aTPPxlKp+RJaKv8T+kabXyHuw/HGVfDKPRkNxUiB+pYQSjMCoWAJo4Bg3fIxnfl0lkZQOOnmpdoJaZ3xnB7YHZT4LDJ0R58U6vFq+QCD+Li+Zkz0DntSiT0PQYnMvf+OruzHZ0CukVUWcLhNQqOWemsf4ZqMKUbwpAyARayxgv3LD1n5bhtvcdVactLidzUUHn+cozbLJH0CtyOr6p57LQgFJ6RJnL4a7Uz0WfSNVW10issqrRNmvVi0p8ubd1iob5sTg/WFYM6og+ZNrbx+H24gkHEENnc= rustam@internship-01
+  - name: muxsinbek
+    password: admin
+    group: muxsinbek
+    state: present 
+    is_sudoer: true
+    groups: []
+    key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDFiE3qaelPD+5gOcY215vQywWXv8++oEMO3iK5jkbAiB+8u+RYN3X5a1NtYdRyEgJEWVwJTzKChTXed++5bJb/y6u0saRb1fk1xYNcYPjLkItYfJdde7Of8we1T1NGMV4LNVIw22NEClpUjWUM5SwU3qLQaAf6ZZ7WJXZXdPZt6eOVPW41fyxPdpRNn1m4x7p0qH2UPuQQ+hQGH05gizlrqW3HPC2RW8ghb3FpGStCAK11MjZLCJUcbY95eotbXfX4BvmlZ8ywJSc74zzRic5QMOfhvHXBfxJlYECOwLc2xM74J8JqpOPOql9Jz+xfax1bG9zHnNqPpf1A1zK+zHupeA+b0NNIwk6fwWkQSqfmFSIzjAlyFZ24nc6QHmhGFIt39tT9K8jen6Rjf7iXS/YUWVzOeiExwOyGZqTsUB5TQZ1BaG5AIR5z+8Wd7BhPWIStgez9VvQqJ0HHwpusealDWZxdMFKvpnu/hQq5f2z0ZB0QtJeXGe4bLS/9k+Z5LKc= max@DESKTOP-BKGMUL4
+  - name: abdurauf
+    password: admin
+    group: abdurauf
+    state: present 
+    is_sudoer: true
+    groups: []
+    key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDAQHJDCe7OylhPUjle7iW1k4OxLGchBDjCAamGb5aVxMjj96ijdj3QIedA/+hcrX1zKRuPSrOnULBIxzWF8AzDHzh3kx00YEqOsuQeMjD/PKRgru6WcUyDIMq5pC2iKcS6XTu/QkFPLlwKd0oGJwh6wbz+NbDyvR8TJy1YtGwoS9EnkZpl1G4bxJK6Cszu56qbQSaN+2RHwAsOaQWV6KVknTF26V3Bt00ioJvZUVQZE9pjqmZyWQRCTNSuwnUo2+xbsr3YU0659gK5hxNob92i9n/fzV6oAFrB5UXxOmnZaGE16FmPE+Sdvs0NCvfA7JmCCSTExs1rkEPVTAo1/gSik2I8jQ6nW+XKy+mGWdtXI3zUHrGx3vuBotcHQADqawJLdgKBR0aXcANyrorYPzJrLdFxK6aQr/gFcBVmNtixeOnFU4uWnh6H2Mnbo69i6RdRYQJUpSI0OlJ0CEVSxeYkFwCZ1vuxMVVVQFQcZdm065ZWgIM1C2E1rrrBMcC1eM0= gnu1inux@gnu1inux-k8s
+  - name: asqar
+    password: admin
+    group: asqar
+    state: present 
+    is_sudoer: true
+    groups: []
+    key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCip2++TgPcpD2gWAGNDfsqk1P5iy9Zckl+GGpHHogJrRLChAcp8XtNDkGRu5PhgsdNQ8JA3GTOG3+iIkF51BQEg9yYmu1BoX32OwzeSppFBIgAU+0qlBIdfbPpJMDaFCbP+BQN39Ai0KO6O/w+LQ3i9n6Kh/9EjwbHnd//U4T9Vjq7xTp8rUB7wZxVXl4zdHuLe+dBi6t4lRJ5uYEDgfpGJRm121CAG9kDN/+3WnC4HhDgW0Of0n8poOuAQ+Wu9p2R+ggu2c4ukG7wGzXWDSAKxPG7pcx2/PGJJtNk68+p3vpeDs0pRSeSaSdHG6H+IpLyuBFde31S4uvyzhEkupHyx7TnCC0ybj20C6HhQx+pgryi5XmEXksRNPb0Nbivx0p7PjtwD7GiLeqr5DfdZmpsBXH/jnXZxvWmKuJ5JOiPG6wRwR+tbuG1AFaPpbO23QVpNWB6wwlBa0tA85Y9TGgHEnoIGhMPQQsSev2qsAK5HbXidzmwo/v/ioSsbGIDaHM= asqar@ubuntu-22
+  - name: elshod
+    password: admin
+    group: elshod
+    state: present 
+    is_sudoer: true
+    groups: []
+    key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+stFQTxdlQCf4lCMatLlNYB12/sQdSUB44nhb9HVhpBLnmC3hIknB1Rji/rHCOCNaGGvxRg/91dkk89NaNQQEFJVjnzE6lAmvGtLe8L/X01cp+kEGzwDB4lxQw9xiewsi7C5tra3S+XFflqt3Jo9+jhbj780QQNR1Zp1E31jxKPJxFiVfehitNAFSBSKTbKnwmh2PJM/k5FIA3zlnXI0feKwDUsJyEHtyDT7ILEQMVcSvGrPODX48Vl7GBYPwIPX45MdRyJLpv7Yk4Jn57MKpNVO1BvqxVCYCaEU0YFp20GpHunQ4kilNvhDzy51zh4gh3E1N05NN5hisgxcM5Mhh47UoVcZqU8yjDwu5Y/VuqwNT6YF8aeyCpcwbcNXQanITl/11/DbqRhDRiRujqdna4WvMcyxeUiu5rAscCa0VrXOsM3UVtpQusbUc3F1AeqdPl6b8PezJgvHCL/O7P5q8mr+P42EA5NugCB2lwI/VgVo/x+zWWteOy8kzqo13FO8= axeman@fedora
