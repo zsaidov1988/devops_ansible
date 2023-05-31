@@ -18,6 +18,9 @@
       debug:
         msg: item.stdout
       with_items: "{{ip_result.results}}"
+    - name: Display IP Address
+      debug:
+        var: ansible_default_ipv4.address   
  
 
     # - name: Node ning OT ni ko'rsat
