@@ -15,44 +15,55 @@
     - name: Node ning OT ni ko'rsat
       debug: 
         var: ansible_facts.distribution
+    - name: List Network Interfaces
+      shell: "ip addr show | grep '^[0-9]' | awk '{print $2}' | sed 's/://'"
+      register: interface_result
+    - name: Get IP Addresses
+      shell: "ip addr show {{ item }} | grep 'inet ' | awk '{print $2}'"
+      register: ip_result
+      loop: "{{ interface_result.stdout_lines }}"
+    - name: Display Interface List
+      debug:
+        msg: item.stdout
+      with_items: "{{ip_result.results}}"
 
-    - name: Create primary group
-      group:
-        name: "{{ user.group }}"
-        state: "{{ user.state }}"
-      with_items: "{{ users }}"
-      loop_control:
-        loop_var: user
+    # - name: Create primary group
+    #   group:
+    #     name: "{{ user.group }}"
+    #     state: "{{ user.state }}"
+    #   with_items: "{{ users }}"
+    #   loop_control:
+    #     loop_var: user
 
-    - name: Create user
-      user:
-        name: "{{ user.name }}"
-        group: "{{ user.group }}"
-        password: "{{ user.password | password_hash('sha512') }}"
-        create_home: true
-        shell: /bin/bash
-      with_items: "{{ users }}"
-      loop_control:
-        loop_var: user
+    # - name: Create user
+    #   user:
+    #     name: "{{ user.name }}"
+    #     group: "{{ user.group }}"
+    #     password: "{{ user.password | password_hash('sha512') }}"
+    #     create_home: true
+    #     shell: /bin/bash
+    #   with_items: "{{ users }}"
+    #   loop_control:
+    #     loop_var: user
 
-    - name: Add user tu sudo group
-      user:
-        name: "{{ user.name }}"
-        groups: sudo
-        append: true
-      when: user.is_sudoer is defined and user.is_sudoer
-      with_items: "{{ users }}"
-      loop_control:
-        loop_var: user
+    # - name: Add user tu sudo group
+    #   user:
+    #     name: "{{ user.name }}"
+    #     groups: sudo
+    #     append: true
+    #   when: user.is_sudoer is defined and user.is_sudoer
+    #   with_items: "{{ users }}"
+    #   loop_control:
+    #     loop_var: user
 
-    - name: Set authorized key taken from variable
-      ansible.posix.authorized_key:
-        user: "{{ user.name }}"
-        state: present
-        key: "{{ user.key }}"
-      with_items: "{{ users }}"
-      loop_control:
-        loop_var: user
+    # - name: Set authorized key taken from variable
+    #   ansible.posix.authorized_key:
+    #     user: "{{ user.name }}"
+    #     state: present
+    #     key: "{{ user.key }}"
+    #   with_items: "{{ users }}"
+    #   loop_control:
+    #     loop_var: user
 
     # - name: File yaratish
     #   file:
