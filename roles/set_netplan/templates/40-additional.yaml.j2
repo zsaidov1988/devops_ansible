@@ -1,0 +1,24 @@
+network:
+    version: 2
+    ethernets:
+{% for interface in netplan.interfaces %}
+        {{ interface.name }}:
+            addresses:
+{% for ip in interface.ipv4 %}
+            - {{ ip }}
+{% endfor %}
+            dhcp4: {{ interface.dhcp4 }}
+            match:
+                macaddress: 96:00:02:3b:5b:7e
+            nameservers:
+                addresses:
+                - 2a01:4ff:ff00::add:1
+                - 2a01:4ff:ff00::add:2
+            routes:
+{% for route in interface.routes %}
+            -   on-link: true
+                to: {{ route.to }}
+                via: {{ route.via }}
+{% endfor %}
+            set-name: {{ interface.name }}
+{% endfor %}

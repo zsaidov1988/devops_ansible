@@ -1,0 +1,140 @@
+2023-06-01 19:42:02,111 p=13778 u=zafarsaidov n=ansible | - Role set_netplan was created successfully
+2023-06-01 19:42:21,287 p=13855 u=zafarsaidov n=ansible | - Role roles/set_netplan was created successfully
+2023-06-01 20:23:25,558 p=16896 u=zafarsaidov n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-06-01 20:23:25,791 p=16896 u=zafarsaidov n=ansible | PLAY [First Playbook] *******************************************************************************************************
+2023-06-01 20:23:25,797 p=16896 u=zafarsaidov n=ansible | TASK [Gathering Facts] ******************************************************************************************************
+2023-06-01 20:23:28,351 p=16896 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 20:23:28,363 p=16896 u=zafarsaidov n=ansible | TASK [set_netplan : Create netplan config files] ****************************************************************************
+2023-06-01 20:23:30,329 p=16896 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:23:30,355 p=16896 u=zafarsaidov n=ansible | PLAY RECAP ******************************************************************************************************************
+2023-06-01 20:23:30,356 p=16896 u=zafarsaidov n=ansible | devops-ansible             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-01 20:25:09,036 p=17153 u=zafarsaidov n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-06-01 20:25:09,168 p=17153 u=zafarsaidov n=ansible | PLAY [First Playbook] *******************************************************************************************************
+2023-06-01 20:25:09,173 p=17153 u=zafarsaidov n=ansible | TASK [Gathering Facts] ******************************************************************************************************
+2023-06-01 20:25:11,714 p=17153 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 20:25:11,725 p=17153 u=zafarsaidov n=ansible | TASK [set_netplan : Create netplan config files] ****************************************************************************
+2023-06-01 20:25:13,737 p=17153 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:25:13,764 p=17153 u=zafarsaidov n=ansible | PLAY RECAP ******************************************************************************************************************
+2023-06-01 20:25:13,764 p=17153 u=zafarsaidov n=ansible | devops-ansible             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-01 20:27:05,873 p=17376 u=zafarsaidov n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-06-01 20:27:06,028 p=17376 u=zafarsaidov n=ansible | PLAY [First Playbook] *******************************************************************************************************
+2023-06-01 20:27:06,033 p=17376 u=zafarsaidov n=ansible | TASK [Gathering Facts] ******************************************************************************************************
+2023-06-01 20:27:08,686 p=17376 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 20:27:08,701 p=17376 u=zafarsaidov n=ansible | TASK [set_netplan : Create netplan config files] ****************************************************************************
+2023-06-01 20:27:10,752 p=17376 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:27:10,778 p=17376 u=zafarsaidov n=ansible | PLAY RECAP ******************************************************************************************************************
+2023-06-01 20:27:10,778 p=17376 u=zafarsaidov n=ansible | devops-ansible             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-01 20:28:00,423 p=17525 u=zafarsaidov n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-06-01 20:28:00,548 p=17525 u=zafarsaidov n=ansible | PLAY [First Playbook] *******************************************************************************************************
+2023-06-01 20:28:00,552 p=17525 u=zafarsaidov n=ansible | TASK [Gathering Facts] ******************************************************************************************************
+2023-06-01 20:28:01,925 p=17525 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 20:28:01,939 p=17525 u=zafarsaidov n=ansible | TASK [set_netplan : Create netplan config files] ****************************************************************************
+2023-06-01 20:28:04,016 p=17525 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:28:04,055 p=17525 u=zafarsaidov n=ansible | PLAY RECAP ******************************************************************************************************************
+2023-06-01 20:28:04,055 p=17525 u=zafarsaidov n=ansible | devops-ansible             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-01 20:33:13,824 p=18015 u=zafarsaidov n=ansible | - Role roles/install_tools was created successfully
+2023-06-01 20:45:48,645 p=18978 u=zafarsaidov n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-06-01 20:45:48,800 p=18978 u=zafarsaidov n=ansible | PLAY [First Playbook] *******************************************************************************************************
+2023-06-01 20:45:48,805 p=18978 u=zafarsaidov n=ansible | TASK [Gathering Facts] ******************************************************************************************************
+2023-06-01 20:45:51,259 p=18978 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 20:45:51,272 p=18978 u=zafarsaidov n=ansible | TASK [set_netplan : Create netplan config files] ****************************************************************************
+2023-06-01 20:45:53,256 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:45:53,272 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Include install tasks] ********************************************************************************
+2023-06-01 20:45:53,312 p=18978 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=htop)
+2023-06-01 20:45:53,313 p=18978 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=bmon)
+2023-06-01 20:45:53,314 p=18978 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=net-tools)
+2023-06-01 20:45:53,315 p=18978 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=iotop)
+2023-06-01 20:45:53,316 p=18978 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=vim)
+2023-06-01 20:45:53,317 p=18978 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=mc)
+2023-06-01 20:45:53,318 p=18978 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=ncdu)
+2023-06-01 20:45:53,324 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Install htop tool] ************************************************************************************
+2023-06-01 20:45:56,403 p=18978 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 20:45:56,415 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for htop] **************************************************************************
+2023-06-01 20:45:56,874 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:45:56,884 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Install bmon tool] ************************************************************************************
+2023-06-01 20:46:02,920 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:46:02,930 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for bmon] **************************************************************************
+2023-06-01 20:46:03,335 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:46:03,344 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Install net-tools tool] *******************************************************************************
+2023-06-01 20:46:05,413 p=18978 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 20:46:05,426 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for net-tools] *********************************************************************
+2023-06-01 20:46:05,831 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:46:05,841 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Install iotop tool] ***********************************************************************************
+2023-06-01 20:46:11,782 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:46:11,792 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for iotop] *************************************************************************
+2023-06-01 20:46:12,183 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:46:12,193 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Install vim tool] *************************************************************************************
+2023-06-01 20:46:14,364 p=18978 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 20:46:14,375 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for vim] ***************************************************************************
+2023-06-01 20:46:14,786 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:46:14,796 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Install mc tool] **************************************************************************************
+2023-06-01 20:46:21,039 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:46:21,046 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for mc] ****************************************************************************
+2023-06-01 20:46:21,428 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:46:21,436 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Install ncdu tool] ************************************************************************************
+2023-06-01 20:46:26,869 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:46:26,889 p=18978 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for ncdu] **************************************************************************
+2023-06-01 20:46:27,324 p=18978 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 20:46:27,350 p=18978 u=zafarsaidov n=ansible | PLAY RECAP ******************************************************************************************************************
+2023-06-01 20:46:27,350 p=18978 u=zafarsaidov n=ansible | devops-ansible             : ok=23   changed=12   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-06-01 21:06:18,382 p=20943 u=zafarsaidov n=ansible | - Role roles/zafar/setup_k8s was created successfully
+2023-06-01 21:06:33,950 p=21024 u=zafarsaidov n=ansible | - Role roles/zafar/init_container was created successfully
+2023-06-01 21:08:51,431 p=21252 u=zafarsaidov n=ansible | [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
+
+2023-06-01 21:08:51,584 p=21252 u=zafarsaidov n=ansible | PLAY [First Playbook] *******************************************************************************************************
+2023-06-01 21:08:51,589 p=21252 u=zafarsaidov n=ansible | TASK [Gathering Facts] ******************************************************************************************************
+2023-06-01 21:08:54,161 p=21252 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 21:08:54,176 p=21252 u=zafarsaidov n=ansible | TASK [set_netplan : Create netplan config files] ****************************************************************************
+2023-06-01 21:08:55,350 p=21252 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 21:08:55,364 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Include install tasks] ********************************************************************************
+2023-06-01 21:08:55,411 p=21252 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=htop)
+2023-06-01 21:08:55,412 p=21252 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=bmon)
+2023-06-01 21:08:55,413 p=21252 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=net-tools)
+2023-06-01 21:08:55,414 p=21252 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=iotop)
+2023-06-01 21:08:55,415 p=21252 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=vim)
+2023-06-01 21:08:55,416 p=21252 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=mc)
+2023-06-01 21:08:55,417 p=21252 u=zafarsaidov n=ansible | included: /Users/zafarsaidov/devops/ansible/roles/install_tools/tasks/install_tools.yml for devops-ansible => (item=ncdu)
+2023-06-01 21:08:55,421 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Install htop tool] ************************************************************************************
+2023-06-01 21:08:57,458 p=21252 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 21:08:57,464 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for htop] **************************************************************************
+2023-06-01 21:08:57,852 p=21252 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 21:08:57,860 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Install bmon tool] ************************************************************************************
+2023-06-01 21:08:59,766 p=21252 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 21:08:59,776 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for bmon] **************************************************************************
+2023-06-01 21:09:00,149 p=21252 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 21:09:00,153 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Install net-tools tool] *******************************************************************************
+2023-06-01 21:09:02,278 p=21252 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 21:09:02,284 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for net-tools] *********************************************************************
+2023-06-01 21:09:02,675 p=21252 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 21:09:02,681 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Install iotop tool] ***********************************************************************************
+2023-06-01 21:09:04,901 p=21252 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 21:09:04,907 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for iotop] *************************************************************************
+2023-06-01 21:09:05,305 p=21252 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 21:09:05,311 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Install vim tool] *************************************************************************************
+2023-06-01 21:09:07,440 p=21252 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 21:09:07,446 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for vim] ***************************************************************************
+2023-06-01 21:09:07,840 p=21252 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 21:09:07,845 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Install mc tool] **************************************************************************************
+2023-06-01 21:09:09,965 p=21252 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 21:09:09,974 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for mc] ****************************************************************************
+2023-06-01 21:09:10,368 p=21252 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 21:09:10,376 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Install ncdu tool] ************************************************************************************
+2023-06-01 21:09:12,346 p=21252 u=zafarsaidov n=ansible | ok: [devops-ansible]
+2023-06-01 21:09:12,355 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Create config file for ncdu] **************************************************************************
+2023-06-01 21:09:12,734 p=21252 u=zafarsaidov n=ansible | changed: [devops-ansible]
+2023-06-01 21:09:12,741 p=21252 u=zafarsaidov n=ansible | TASK [install_tools : Include install tasks] ********************************************************************************
+2023-06-01 21:09:12,761 p=21252 u=zafarsaidov n=ansible | skipping: [devops-ansible] => (item=htop) 
+2023-06-01 21:09:12,763 p=21252 u=zafarsaidov n=ansible | skipping: [devops-ansible] => (item=bmon) 
+2023-06-01 21:09:12,766 p=21252 u=zafarsaidov n=ansible | skipping: [devops-ansible] => (item=net-tools) 
+2023-06-01 21:09:12,769 p=21252 u=zafarsaidov n=ansible | skipping: [devops-ansible] => (item=iotop) 
+2023-06-01 21:09:12,772 p=21252 u=zafarsaidov n=ansible | skipping: [devops-ansible] => (item=vim) 
+2023-06-01 21:09:12,775 p=21252 u=zafarsaidov n=ansible | skipping: [devops-ansible] => (item=mc) 
+2023-06-01 21:09:12,776 p=21252 u=zafarsaidov n=ansible | skipping: [devops-ansible] => (item=ncdu) 
+2023-06-01 21:09:12,777 p=21252 u=zafarsaidov n=ansible | skipping: [devops-ansible]
+2023-06-01 21:09:12,791 p=21252 u=zafarsaidov n=ansible | PLAY RECAP ******************************************************************************************************************
+2023-06-01 21:09:12,791 p=21252 u=zafarsaidov n=ansible | devops-ansible             : ok=23   changed=7    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   

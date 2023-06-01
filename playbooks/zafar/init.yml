@@ -1,0 +1,13 @@
+---
+- name: First Playbook
+  hosts: devops-ansible
+  gather_facts: true
+  # vars_files:
+  #   - ./vars.yml
+  # tasks:
+  #   - name: Ping
+  #     ping:
+
+  roles:
+    - role: set_netplan
+    - role: install_tools

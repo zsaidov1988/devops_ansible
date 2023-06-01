@@ -1,0 +1,11 @@
+---
+- name: Install {{ item }} tool
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+
+- name: Create config file for {{ item }}
+  file:
+    name: "{{ item }}.conf"
+    state: touch

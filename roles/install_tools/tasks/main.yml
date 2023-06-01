@@ -1,0 +1,10 @@
+---
+- name: Include install tasks
+  include_tasks: install_tools.yml
+  with_items: "{{ tools }}"
+  when: ansible_facts.distribution == "Ubuntu"
+
+- name: Include install tasks
+  include_tasks: install_tools_yum.yml
+  with_items: "{{ tools }}"
+  when: ansible_facts.distribution == "CentOS"
