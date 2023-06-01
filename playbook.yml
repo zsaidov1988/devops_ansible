@@ -8,6 +8,14 @@
     - name: Ping
       ping:
 
+    - name: Ip address
+      debug:
+        var: ansible_facts.all_ipv4_addresses
+
+    - name: Bios Vendor
+      debug:
+        var: ansible_facts.bios_vendor
+         
     - name: Architecture
       debug: 
         var: ansible_facts.architecture
@@ -15,44 +23,6 @@
     - name: Node ning OT ni ko'rsat
       debug: 
         var: ansible_facts.distribution
-
-    - name: Create primary group
-      group:
-        name: "{{ user.group }}"
-        state: "{{ user.state }}"
-      with_items: "{{ users }}"
-      loop_control:
-        loop_var: user
-
-    - name: Create user
-      user:
-        name: "{{ user.name }}"
-        group: "{{ user.group }}"
-        password: "{{ user.password | password_hash('sha512') }}"
-        create_home: true
-        shell: /bin/bash
-      with_items: "{{ users }}"
-      loop_control:
-        loop_var: user
-
-    - name: Add user tu sudo group
-      user:
-        name: "{{ user.name }}"
-        groups: sudo
-        append: true
-      when: user.is_sudoer is defined and user.is_sudoer
-      with_items: "{{ users }}"
-      loop_control:
-        loop_var: user
-
-    - name: Set authorized key taken from variable
-      ansible.posix.authorized_key:
-        user: "{{ user.name }}"
-        state: present
-        key: "{{ user.key }}"
-      with_items: "{{ users }}"
-      loop_control:
-        loop_var: user
 
     # - name: File yaratish
     #   file:
