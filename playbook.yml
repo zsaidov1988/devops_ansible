@@ -1,7 +1,7 @@
 ---
 - name: First Playbook
   hosts: devops-ansible
-  gather_facts: true
+  gather_facts: false
   vars_files:
     - ./vars.yml
   tasks:
@@ -29,7 +29,7 @@
      
     - name: Papka yaratish
       file:
-        path: /home/maruf/{{ papka  }}
+        path: /home/maruf/{{ item  }}
         state: directory
       with_items:
         - test_folder1

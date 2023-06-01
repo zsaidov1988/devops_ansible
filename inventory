@@ -1,8 +1,8 @@
-#local-node ansible_host=127.0.0.1 ansible_connection=local
-devops-ansible ansible_port=22 ansible_host=37.27.16.190 ansible_connection=ssh ansible_user=maruf ansible_private_key=/home/nginx/ansible/ansible.pem
+local-node ansible_host=127.0.0.1 ansible_connection=local
+devops-ansible ansible_port=22 ansible_host=37.27.16.190 ansible_connection=ssh ansible_user=maruf ansible_private_key=/home/nginx/.ssh/ansible.pem
 
 [all-servers]
-#local-node
+local-node
 devops-ansible
 
 [db-servers]
