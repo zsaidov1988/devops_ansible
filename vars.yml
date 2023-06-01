@@ -1,0 +1,9 @@
+
+users:  
+  - name: test
+    password: test
+    group: test
+    state: present
+    is_sudoers: true
+    groups: []
+    key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCh5rA+UG9UiaBe+GtyznAOdpsHhMYkOGqPdzsMe515EoVS7QaGdj1m274YmaUAssR7NEKJHR+dAyLzt8uMz3eQQJG9W5DliyqxYq4YqhfF/I8DdMRhMN3aL45vVDTpQzRpWwxys3rImG0bpPn5RPs/aS8XUp5DRCrO77fOiUYF1RmObJI+9z49YKKlfVNiufk8zQfZaHiKgLJzbApMjegR1++YXXL9YJhOpsPnFngsFKvyIZBYxFxybn//veRjdtLO6aznKHGeurwScy9WWl5nPygx56IK8Jo4orcJuq0D+LccW60PfDXzpB5cfyCKQQxT/IM3hxAWxhmh2ivelibGP2+E5NGoJOT/RdA1JFwzrLO/sd+x7lldwjFrwzruwMbMk2cspwa8Nfk5j9v7IS4sU9cHs/28fQ10IR5FotQvWfRBB1s8YkL/7B/tbugSAigyXIGdfRdWNE3B7fSkEWdxwTBp5aJuICmDDYg3FTKbYUSCnVqkIYPou4l5wlhKhW0= jamoliddin@sword

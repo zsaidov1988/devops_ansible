@@ -1,0 +1,107 @@
+---
+- name: First Playbook
+  hosts: devops-hetzner
+  become: false
+  gather_facts: true
+  vars_files:
+    - "./vars.yml"
+  tasks:
+    - name: Ping
+      ping:
+    - name: node information
+      debug:
+        var: ansible_facts          
+    - name: Proccessor
+      debug:
+        var: ansible_facts.processor
+    - name: nodename
+      debug:
+        var: ansible_facts.nodename 
+    - name: Architecture
+      debug:
+        var: ansible_facts.architecture
+    - name: OS
+      debug:
+        var: ansible_facts.distribution
+    - name: PUBLIC IP
+      debug:
+        var: ansible_all_ipv4_addresses
+    
+    # - name: Create primary groups 
+    #   group: 
+    #     name: "{{ userjon.group }}"
+    #     state: "{{ userjon.state }}"
+    #   with_items: "{{ users }}"
+    #   loop_control:
+    #     loop_var: userjon 
+    # - name: Create user 
+    #   user:
+    #     name: "{{ userjon.name }}"
+    #     comment: "{{ userjon.name }}"
+    #     group: "{{ userjon.group }}"
+    #     password: "{{ userjon.password | password_hash('sha512') }}"
+    #     create_home: true
+    #     shell: /bin/bash
+    #   with_items: "{{ users }}"
+    #   loop_control:
+    #     loop_var: userjon
+    # - name: Add user to sudo group 
+    #   user: 
+    #     name: "{{ userjon.name }}"
+    #     groups: sudo 
+    #     append: true
+    #   when: userjon.is_sudoers is defined and userjon.is_sudoers
+    #   with_items: "{{ users }}"
+    #   loop_control:
+    #     loop_var: userjon
+    # - name: Set authorized key taken from variable
+    #   ansible.posix.authorized_key:
+    #     user: "{{ userjon.name }}"
+    #     state: present
+    #     key: "{{ userjon.key }}"
+    #   with_items: "{{ users }}"
+    #   loop_control:
+    #     loop_var: userjon 
+      
+
+    - name: Create Ansible directory
+      file:
+        path: /home/jamol/ansible
+        state: directory
+    
+    - name: file create
+      file:
+        path: /home/jamol/ansible/{{ item }}
+        state: touch
+      when: ansible_facts.distribution == "Ubuntu" or not ansible_facts.architecture == "x86_64" 
+      with_items:
+        - test1
+        - test2
+        - test3
+    - name: Create directory
+      file:
+        path: /home/jamol/ansible/directory
+        state: directory
+      when: ansible_facts.nodename == "devops-ansible" and ansible_facts.architecture == "x86_64"
+
+    - name: create directory2
+      file:
+        path: /home/jamol/ansible/{{ papka.path }}
+        state: '{{ papka.state }}'
+        mode: '{{ papka.mode }}'
+      when: 
+        - ansible_facts.distribution == "Ubuntu"
+      loop:
+        - path: papka1
+          state: directory
+          mode: 755
+
+        - path: papka2
+          state: touch
+          mode: 600
+
+        - path: papka3
+          state: touch
+          mode: 404     
+      loop_control:
+        loop_var: papka
