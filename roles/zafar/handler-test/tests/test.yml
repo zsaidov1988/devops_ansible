@@ -2,4 +2,4 @@
 - hosts: localhost
   remote_user: root
   roles:
-    - roles/zafar/init_container
+    - roles/zafar/handler-test

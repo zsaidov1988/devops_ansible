@@ -1,0 +1,9 @@
+---
+- name: restart_cron
+  systemd:
+    name: cron
+    state: started
+- name: stop_cron
+  systemd:
+    name: cron
+    state: stopped

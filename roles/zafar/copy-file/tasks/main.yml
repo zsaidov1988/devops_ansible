@@ -1,0 +1,21 @@
+---
+- name: Copy file
+  copy:
+    src: text.txt
+    dest: "{{ dest }}"
+    mode: 0755
+
+- name: Add line to file
+  lineinfile:
+    path: "{{ dest }}"
+    regexp: '^listen='
+    line: listen=0.0.0.0
+    
+- name: Search with a multiline search flags regex and if found insert after
+  blockinfile:
+    path: "{{ dest }}"
+    block: |
+      Bu qo'shilgan block {{ dest }}
+      This is added block {{ wmode }}
+    insertbefore: '^listen='
+    marker: "    <!-- {mark} BIZ QO'SHDIK -->"
