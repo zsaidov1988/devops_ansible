@@ -1,0 +1,6 @@
+---
+# tasks file for roles/common_tools
+- name: Install common tools
+  apt: 
+    name: "{{ common_tools }}"
+    state: present

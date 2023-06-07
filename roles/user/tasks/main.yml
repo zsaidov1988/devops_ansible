@@ -1,0 +1,6 @@
+---
+- name: Create user tasks
+  include_tasks: create_users.yml
+  with_items: "{{ users }}"
+  loop_control:
+    loop_var: user

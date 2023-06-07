@@ -1,0 +1,9 @@
+---
+# defaults file for roles/common_tools
+common_tools:
+  - htop 
+  - curl 
+  - vim 
+  - net-tools
+  - iotop 
+  - bmon

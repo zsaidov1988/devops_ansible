@@ -1,0 +1,31 @@
+---
+- name: Initial Playbook
+  hosts: devops-ansible
+  gather_facts: false
+  # roles:
+  #   - role: user
+  #   - role: ssh_keys
+
+- name: Server configurations
+  hosts: devops-ansible
+  become: true
+  gather_facts: true
+  vars:
+    ansible_user: "{{ sudo_user }}"
+    ansible_sudo_pass: "{{ sudo_pass }}"
+  # roles:
+  #   - role: sshd_conf
+
+- name: Install common tools
+  hosts: devops-ansible
+  become: true
+  gather_facts: true
+  vars:
+    ansible_user: "{{ sudo_user }}"
+    ansible_port: "{{ sshd.port }}"
+    ansible_sudo_pass: "{{ sudo_pass }}"
+  roles: 
+    # - role: common_tools
+    # - role: kernel
+    # - role: docker_install
+    - role: docker_run

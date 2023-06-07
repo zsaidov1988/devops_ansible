@@ -1,0 +1,10 @@
+---
+apps: 
+  - image: nginx
+    name: app1
+    ports: 
+      - "5001:80"
+  - image: hello-world
+    name: app2
+    ports: 
+      - "5002:80"

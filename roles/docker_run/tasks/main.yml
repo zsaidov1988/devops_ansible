@@ -1,0 +1,25 @@
+---
+# tasks file for roles/docker_run
+- name: Pip install
+  apt: 
+    name: python3-pip
+    state: present
+
+- name: Pip docker
+  pip:
+    name: 
+      - docker
+      - docker-compose
+    state: present 
+    executable: pip3
+
+- name: Start flask project with inline definition
+  community.docker.docker_compose:
+    project_name: "{{ item.name }}"
+    definition:
+      version: '3'
+      services:
+        app:
+          image: "{{ item.image }}"
+          ports: "{{ item.ports }}"
+  with_items: "{{ apps }}"

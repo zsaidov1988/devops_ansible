@@ -1,0 +1,11 @@
+---
+# defaults file for roles/user
+sudo_user: ubuntu
+sudo_pass: sss
+users:
+  - name: ubuntu
+    group: ubuntu
+    create_home_dir: true
+    password: 1
+    is_sudoer: true
+    state: present

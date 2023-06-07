@@ -1,0 +1,11 @@
+---
+# tasks file for roles/ip_tables
+- name: Allow new incoming SYN packets on TCP port 22 (SSH)
+  ansible.builtin.iptables:
+    chain: INPUT
+    protocol: tcp
+    destination_port: 2222
+    ctstate: NEW
+    syn: match
+    jump: ACCEPT
+    comment: Accept new SSH connections.
