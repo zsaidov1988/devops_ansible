@@ -1,0 +1,15 @@
+---
+# tasks file for roles/jamol/nginx_install
+- name: Install nginx 
+  include_tasks: apt.yml
+  with_items: "{{ tools }}"
+  when: ansible_facts.distribution == "Ubuntu"
+
+- name: Install nginx 
+  include_tasks: yum.yml
+  with_items: "{{ tools }}"
+  when: ansible_facts.distribution == "CentOS"
+
+
+  
+ 

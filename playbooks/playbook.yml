@@ -9,9 +9,9 @@
   #     ping:
 
   roles:
-    - role: set_netplan
-    - role: install_tools
-    - role: zafar/init_container
+    - role: jamol/set_netplan
+    - role: jamol/install_tools
+    - role: jamol/nginx_install
 
 
     # - name: Architecture

@@ -1,0 +1,6 @@
+---
+- name: create netplan config vars_files
+  template: 
+    src: 30-additional.yaml.j2
+    dest: /tmp/30-additional.yaml
+
