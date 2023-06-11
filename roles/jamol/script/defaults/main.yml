@@ -1,0 +1,4 @@
+---
+# defaults file for roles/jamol/script
+username:
+  path: /tmp/script.sh

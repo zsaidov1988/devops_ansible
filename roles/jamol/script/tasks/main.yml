@@ -1,0 +1,26 @@
+---
+# tasks file for roles/jamol/script
+- name: Run a script with arguments (free form)
+  become: true
+  script: /tmp/script.sh
+    
+
+# - name: Run a script with arguments (using 'cmd' parameter)
+#   script:
+#     executable: bash
+#     cmd: "{{ username.path }}"
+#     register: console
+# - debug: msg="{{ console.stdout }}"
+# - debug: msg="{{ console.stderror }}"
+
+
+# - name: Change the working directory to somedir/ before executing the command.
+#   shell: /tmp/script.sh
+  
+  
+# - debug:
+#     msg: " {{ stdout_line }}"
+
+
+  
+    

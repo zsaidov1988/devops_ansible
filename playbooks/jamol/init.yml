@@ -1,13 +1,18 @@
 ---
 - name: First Playbook
-  hosts: devops-hetzner
+  hosts: devops
   become: true
-  gather_facts: true
+  gather_facts: false
+
+  
 
   roles: 
     # - role: set_netplan
-    - role: jamol/install_tools
-    - role: jamol/nginx_install
+    # - role: jamol/install_tools
+    # - role: jamol/nginx_install
+    # - role: jamol/SET-timezone
+    - role: jamol/copy-files
+    - role: jamol/script
   # vars_files:
   #   - "./vars.yml"
   # tasks:

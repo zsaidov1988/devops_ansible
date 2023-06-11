@@ -1,0 +1,6 @@
+---
+# defaults file for roles/jamol/copy-files
+
+copy: 
+  dest: /home/{{ ansible_user }}
+  mode: 777

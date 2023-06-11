@@ -1,0 +1,30 @@
+---
+# tasks file for roles/jamol/copy-files
+- name: Copy file
+  copy: 
+    src: script.sh
+    dest: "{{ copy.dest }}"
+    mode: "{{ copy.mode }}"
+
+# - name: Copy file
+#   copy:
+#     src: test.txt
+#     dest: "{{ copy.dest }}"
+#     mode: "{{ copy.mode }}"
+
+# - name: Add line to file
+#   lineinfile:
+#     path: "{{ copy.dest }}"
+#     regexp: '^listen='
+#     line: listen=0.0.0.0
+
+# - name: Search with a multiline search flags regex and if found insert after
+#   blockinfile:
+#     path: "{{ copy.dest }}"
+#     block: |
+#       Bu blok qoshdik   "{{ copy.dest }}"
+#       We added this block "{{ copy.mode }}"
+#       qoshildi
+#     insertbefore: '^listen='
+#     marker: "    <!-- {mark} qoshganlardan salom-->"
+
