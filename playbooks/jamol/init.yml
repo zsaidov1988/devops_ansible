@@ -2,7 +2,7 @@
 - name: First Playbook
   hosts: devops
   become: true
-  gather_facts: false
+  gather_facts: true
   # become_user: jamol
   
 
@@ -14,18 +14,77 @@
     # - role: jamol/nginx_install
     # - role: jamol/SET-timezone
     # - role: jamol/copy-files
-    - role: jamol/script
+    # - role: jamol/script
   # vars_files:
   #   - "./vars.yml"
-  # tasks:
-  #   - name: fact 
-  #     debug: 
-  #       var: ansible_facts.architecture
+  tasks:
+    - name: Block of tasks
+      become: true
+      when: true
+      block:
 
-  #   - name: command whoami
-  #     become_user: jamol
-  #     shell: whoami
-  #     when: shart
+        # - name: fact 
+        #   debug: 
+        #     var: ansible_facts.architecture
+
+        - name: command whoami
+          shell: whoami
+          register: ami
+        - debug:
+            msg: "{{ ami.stdout_lines }}"
+          
+        - name: command Module
+          command: echo $HOME
+          register: home
+        - debug:
+            msg: "{{ home.stdout }}"
+
+        - name: Services
+          shell: systemctl list-units | grep "active running" | grep {{ cron }}
+          register: services
+          ignore_errors: true
+        - name: Debug 
+          debug:
+            var: services
+            # msg: "{{ services.stdout_lines }}"
+
+        - name: Check there is 
+          debug:
+            msg: "{{ cron }} mavjud"
+          when: services.stdout
+        
+        - name: Check there is not
+          debug:
+            msg: "{{ cron }} mavjud emas"
+          when: not services.stdout
+        - name: Restarting Test 
+          debug:
+            msg: "{{ cron }} ishlaydi"
+          when: services.stdout_lines
+          changed_when: true
+          notify: stop_cron
+        
+        - name: stopping test 
+          debug:
+            msg: "{{ cron }} ishlamaydi"
+          when: not services.stdout_lines
+          changed_when: true
+          notify: restart_cron
+  handlers: 
+    - name: restart_cron
+      systemd:
+        name: cron
+        state: started
+    - name: stop_cron 
+      systemd:
+        name: cron
+        state: stopped
+
+  
+
+ 
+
+
 
 
 # - name: second play

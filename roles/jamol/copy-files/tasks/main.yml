@@ -2,10 +2,10 @@
 # tasks file for roles/jamol/copy-files
 - name: Copy file
   copy: 
-    src: script.sh
+    src: test.txt
     dest: "{{ copy.dest }}"
     mode: "{{ copy.mode }}"
-
+    
 # - name: Copy file
 #   copy:
 #     src: test.txt

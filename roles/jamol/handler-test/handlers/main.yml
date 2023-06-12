@@ -1,0 +1,11 @@
+---
+# handlers file for roles/jamol/handler-test
+
+    - name: restart_cron
+      systemd:
+        name: cron
+        state: started
+    - name: stop_cron 
+      systemd:
+        name: cron
+        state: stopped
