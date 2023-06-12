@@ -2,7 +2,27 @@
 # tasks file for roles/jamol/script
 - name: Run a script with arguments (free form)
   become: true
-  script: /tmp/script.sh
+  script: "{{ username.path }}"
+  register: result
+- name: list contents
+  debug:
+    msg: "{{ item }}"
+  loop: "{{ result.stdout_lines }}"
+- name: std out
+  debug: 
+    msg: "{{ result.stdout }}"
+- name: std error
+  debug: 
+    msg: "{{ result.stderr }}"
+
+- name: List directory contents
+  shell: ls /home/{{ ansible_user }}/directory
+  register: dir_contents
+- name: Check if directory is empty
+  debug:
+    msg: "Directory is empty."
+  when: dir_contents.stdout == ""
+
     
 
 # - name: Run a script with arguments (using 'cmd' parameter)

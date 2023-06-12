@@ -2,8 +2,7 @@
 echo $USER
 echo salom
 touch file
+mkdir directory
 pwd
-ls -la
-cd /var/
-ls -la
+
 
