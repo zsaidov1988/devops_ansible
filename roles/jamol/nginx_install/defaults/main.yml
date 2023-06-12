@@ -1,5 +1,7 @@
 ---
 tools: 
   - nginx
+  - mc
+  
   
   

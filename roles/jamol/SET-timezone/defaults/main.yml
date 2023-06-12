@@ -1,0 +1,4 @@
+---
+# defaults file for roles/jamol/SET-timezone
+set_time:
+  timezone: Asia/Tokyo
