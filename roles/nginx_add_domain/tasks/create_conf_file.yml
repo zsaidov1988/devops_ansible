@@ -1,0 +1,18 @@
+---
+# - name: Change default conf 
+#   lineinfile:
+#     path: /etc/nginx/sites-available/default
+#     regexp: "server_name _"
+#     line: "server_name example.com;"
+
+- name: Create nginx conf file for domain {{ item.domain }}
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/sites-available/{{ item.domain }}
+  # notify: reload_nginx
+  
+- name: Create soft link for /etc/nginx/sites-available/{{ item.domain }} file
+  file:
+    src: /etc/nginx/sites-available/{{ item.domain }}
+    dest: /etc/nginx/sites-enabled/{{ item.domain }}
+    state: link

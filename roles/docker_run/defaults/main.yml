@@ -1,10 +1,10 @@
 ---
 apps: 
-  - image: nginx
+  - path: /var/app1
     name: app1
     ports: 
-      - "5001:80"
-  - image: hello-world
+      - "5001:5050"
+  - path: /var/app2
     name: app2
     ports: 
-      - "5002:80"
+      - "5002:5050"

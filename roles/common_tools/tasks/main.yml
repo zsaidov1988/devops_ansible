@@ -4,3 +4,4 @@
   apt: 
     name: "{{ common_tools }}"
     state: present
+    update_cache: true

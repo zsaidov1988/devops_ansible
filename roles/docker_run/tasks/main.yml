@@ -13,6 +13,28 @@
     state: present 
     executable: pip3
 
+- name: Make directories for apps
+  file:
+    path: "{{ item }}"
+    state: directory
+  with_items:
+    - /var/app1
+    - /var/app2
+
+- name: Copy files
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - src: app1/app.py
+      dest: /var/app1/app.py
+    - src: app1/Dockerfile
+      dest: /var/app1/Dockerfile
+    - src: app2/app.py
+      dest: /var/app2/app.py
+    - src: app2/Dockerfile
+      dest: /var/app2/Dockerfile
+
 - name: Start flask project with inline definition
   community.docker.docker_compose:
     project_name: "{{ item.name }}"
@@ -20,6 +42,6 @@
       version: '3'
       services:
         app:
-          image: "{{ item.image }}"
+          build: "{{ item.path }}"
           ports: "{{ item.ports }}"
   with_items: "{{ apps }}"
