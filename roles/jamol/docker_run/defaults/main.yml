@@ -1,0 +1,12 @@
+---
+# defaults file for roles/jamol/docker_run
+apps: 
+  - image: onlineuz/dev-app1:v4
+    name: app1 
+    ports: 
+      - "5001:8182"
+  - image: onlineuz/dev-app2:v4
+    name: app2
+    ports: 
+      - "5002:8182"
+

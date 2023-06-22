@@ -1,0 +1,11 @@
+---
+# tasks file for roles/jamol/certbot
+- name: Install Certbot and plugins 
+  apt: 
+    name: ["certbot", "python3-certbot-nginx"]
+    state: present 
+
+# - name: set certbot script variable
+#   set_fact: 
+#     certbot_script: {{ cert_package}}
+

@@ -1,198 +1,55 @@
 ---
-- name: First Playbook
-  hosts: devops
+- name: Initial Playbook
+  hosts: devops-aws
+  become: true
+  gather_facts: false
+
+   
+  roles: 
+    # - role: jamol/user_create
+    # - role: jamol/ssh_keys
+   
+- name: server configuration
+  hosts: devops-aws
+  # become: true 
+  gather_facts: true
+  vars: 
+    ansible_ssh_private_key_file: "{{ private_key_file }}"
+    ansible_user: "{{ sudo_user }}"
+    ansible_sudo_pass: "{{ sudo_pass }}"
+
+  roles:
+    # - role: jamol/sshd_conf
+
+# - name: test 
+#   hosts: devops-aws
+#   gather_facts: true
+#   vars: 
+#     ansible_user: "{{ sudo_user }}"
+#     ansible_port: "{{ sshd.port }}"
+#     ansible_ssh_private_key_file: "{{ private_key_file }}"
+    
+#   tasks: 
+#     - shell: whoami
+#       register: result
+#     - debug:
+#         msg: "{{ result.stdout }}"
+
+- name: Install commont tools
+  hosts: devops-aws
   become: true
   gather_facts: true
-  # become_user: jamol
-  
-
-  
-
-  roles: 
-    # - role: set_netplan
-    # - role: jamol/install_tools
+  vars: 
+    ansible_user: "{{ sudo_user }}"
+    ansible_port: "{{ sshd.port }}"
+    ansible_ssh_private_key_file: "{{ private_key_file }}"
+  roles:
+    # - role: jamol/common_tools
+    # - role: jamol/kernel
+    # - role: jamol/iptables 
+    # - role: jamol/docker_install
+    # - role: jamol/docker_run 
+    # - role: jamol/certbot 
     # - role: jamol/nginx_install
-    # - role: jamol/SET-timezone
-    # - role: jamol/copy-files
-    # - role: jamol/script
-  # vars_files:
-  #   - "./vars.yml"
-  tasks:
-    - name: Block of tasks
-      become: true
-      when: true
-      block:
-
-        # - name: fact 
-        #   debug: 
-        #     var: ansible_facts.architecture
-
-        - name: command whoami
-          shell: whoami
-          register: ami
-        - debug:
-            msg: "{{ ami.stdout_lines }}"
-          
-        - name: command Module
-          command: echo $HOME
-          register: home
-        - debug:
-            msg: "{{ home.stdout }}"
-
-        - name: Services
-          shell: systemctl list-units | grep "active running" | grep {{ cron }}
-          register: services
-          ignore_errors: true
-        - name: Debug 
-          debug:
-            var: services
-            # msg: "{{ services.stdout_lines }}"
-
-        - name: Check there is 
-          debug:
-            msg: "{{ cron }} mavjud"
-          when: services.stdout
-        
-        - name: Check there is not
-          debug:
-            msg: "{{ cron }} mavjud emas"
-          when: not services.stdout
-        - name: Restarting Test 
-          debug:
-            msg: "{{ cron }} ishlaydi"
-          when: services.stdout_lines
-          changed_when: true
-          notify: stop_cron
-        
-        - name: stopping test 
-          debug:
-            msg: "{{ cron }} ishlamaydi"
-          when: not services.stdout_lines
-          changed_when: true
-          notify: restart_cron
-  handlers: 
-    - name: restart_cron
-      systemd:
-        name: cron
-        state: started
-    - name: stop_cron 
-      systemd:
-        name: cron
-        state: stopped
-
-  
-
- 
-
-
-
-
-# - name: second play
-#   hosts: devops
-#   gather_facts: true
-
-#   tasks:
-  
-#      - name: command whoami
-#        shell: whoami
-      
-      
-  #   - name: Ping
-  #     ping:
-  #   - name: node information
-  #     debug:
-  #       var: ansible_facts          
-  #   - name: Proccessor
-  #     debug:
-  #       var: ansible_facts.processor
-  #   - name: nodename
-  #     debug:
-  #       var: ansible_facts.nodename 
-  #   - name: Architecture
-  #     debug:
-  #       var: ansible_facts.architecture
-  #   - name: OS
-  #     debug:
-  #       var: ansible_facts.distribution
-  #   - name: PUBLIC IP
-  #     debug:
-  #       var: ansible_all_ipv4_addresses
-    
-    # - name: Create primary groups 
-    #   group: 
-    #     name: "{{ userjon.group }}"
-    #     state: "{{ userjon.state }}"
-    #   with_items: "{{ users }}"
-    #   loop_control:
-    #     loop_var: userjon 
-    # - name: Create user 
-    #   user:
-    #     name: "{{ userjon.name }}"
-    #     comment: "{{ userjon.name }}"
-    #     group: "{{ userjon.group }}"
-    #     password: "{{ userjon.password | password_hash('sha512') }}"
-    #     create_home: true
-    #     shell: /bin/bash
-    #   with_items: "{{ users }}"
-    #   loop_control:
-    #     loop_var: userjon
-    # - name: Add user to sudo group 
-    #   user: 
-    #     name: "{{ userjon.name }}"
-    #     groups: sudo 
-    #     append: true
-    #   when: userjon.is_sudoers is defined and userjon.is_sudoers
-    #   with_items: "{{ users }}"
-    #   loop_control:
-    #     loop_var: userjon
-    # - name: Set authorized key taken from variable
-    #   ansible.posix.authorized_key:
-    #     user: "{{ userjon.name }}"
-    #     state: present
-    #     key: "{{ userjon.key }}"
-    #   with_items: "{{ users }}"
-    #   loop_control:
-    #     loop_var: userjon 
-      
-
-    # - name: Create Ansible directory
-    #   file:
-    #     path: /home/jamol/ansible
-    #     state: directory
-    
-    # - name: file create
-    #   file:
-    #     path: /home/jamol/ansible/{{ item }}
-    #     state: touch
-    #   when: ansible_facts.distribution == "Ubuntu" or not ansible_facts.architecture == "x86_64" 
-    #   with_items:
-    #     - test1
-    #     - test2
-    #     - test3
-    # - name: Create directory
-    #   file:
-    #     path: /home/jamol/ansible/directory
-    #     state: directory
-    #   when: ansible_facts.nodename == "devops-ansible" and ansible_facts.architecture == "x86_64"
-
-    # - name: create directory2
-    #   file:
-    #     path: /home/jamol/ansible/{{ papka.path }}
-    #     state: '{{ papka.state }}'
-    #     mode: '{{ papka.mode }}'
-    #   when: 
-    #     - ansible_facts.distribution == "Ubuntu"
-    #   loop:
-    #     - path: papka1
-    #       state: directory
-    #       mode: 755
-
-    #     - path: papka2
-    #       state: touch
-    #       mode: 600
-
-    #     - path: papka3
-    #       state: touch
-    #       mode: 404     
-    #   loop_control:
-    #     loop_var: papka
+    # - role: jamol/nginx_add_domen
+    - role: jamol/check_domain

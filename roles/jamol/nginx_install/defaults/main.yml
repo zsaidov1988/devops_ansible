@@ -1,7 +1,2 @@
 ---
-tools: 
-  - nginx
-  - mc
-  
-  
-  
+# defaults file for roles/jamol/nginx_install

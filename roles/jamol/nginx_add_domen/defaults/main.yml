@@ -1,0 +1,9 @@
+---
+# defaults file for roles/jamol/nginx_add_domen
+nginx_email: test@test.com
+nginx_domains: 
+  - domain: 
+    upstream: 
+    host: 
+    port: 
+    body_size: 

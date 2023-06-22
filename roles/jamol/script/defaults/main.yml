@@ -1,4 +1,0 @@
----
-# defaults file for roles/jamol/script
-username:
-  path: /home/jamoliddin/ansible/lesson-2/devops_ansible/roles/jamol/copy-files/files/script.sh

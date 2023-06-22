@@ -1,0 +1,9 @@
+---
+# tasks file for roles/jamol/common_tools
+- name: Install common tools 
+  apt: 
+    name: "{{ common_tools }} "
+    state: present 
+  register: result
+- debug:
+    msg: "{{ result }}"

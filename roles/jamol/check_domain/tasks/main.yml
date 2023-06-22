@@ -1,0 +1,4 @@
+--- 
+- name: check domain 
+  include_tasks: check_domain.yml 
+  with_items: "{{ checked_domains }}"

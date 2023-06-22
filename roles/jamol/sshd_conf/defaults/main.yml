@@ -1,0 +1,4 @@
+---
+# defaults file for roles/jamol/sshd_conf
+sshd:
+  port: 2222

@@ -1,0 +1,23 @@
+---
+- name: Create primary group "{{ user.name }}"
+  group:
+    name: "{{ user.group }}"
+    state: "{{ user.state }}"
+ 
+
+- name: Create  "{{ user.name }}" user
+  user:
+    name: "{{ user.name }}"
+    group: "{{ user.group }}"
+    password: "{{ user.password | password_hash('sha512') }}"
+    create_home: "{{ user.create_home_dir }}"
+    shell: /bin/bash
+  
+
+- name: Add "{{ user.name }}" user to sudo group
+  user:
+    name: "{{ user.name }}"
+    groups: sudo
+    append: true
+  when: user.is_sudoer is defined and user.is_sudoer
+  

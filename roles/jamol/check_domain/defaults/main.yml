@@ -1,0 +1,5 @@
+---
+# defaults file for roles/jamol/check_domain
+checked_domains: 
+  - app1.onlineuz.uz
+  - app2.onlineuz.uz

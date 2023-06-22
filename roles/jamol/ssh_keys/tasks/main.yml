@@ -1,0 +1,6 @@
+---
+- name: Send ssh public key
+  include_tasks: ssh.yml
+  with_items: "{{ ssh_keys }}"
+  loop_control:
+    loop_var: ssh

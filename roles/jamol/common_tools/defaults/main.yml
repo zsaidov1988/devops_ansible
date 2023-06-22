@@ -1,0 +1,13 @@
+---
+# defaults file for roles/jamol/common_tools
+common_tools:
+  - htop
+  - curl
+  - vim
+  - net-tools
+  - iotop
+  - bmon
+  - mc
+  - iftop
+  - telnet
+

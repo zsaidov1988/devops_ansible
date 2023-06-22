@@ -1,9 +1,0 @@
----
-tools:
-  - htop
-  - bmon
-  - net-tools
-  - iotop
-  - vim
-  - mc
-  - ncdu

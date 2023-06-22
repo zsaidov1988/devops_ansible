@@ -1,0 +1,8 @@
+--- 
+- name: Set authorized key for user {{ ssh.user }}
+  ansible.posix.authorized_key:
+    user: "{{ ssh.user }}"
+    state: "{{ ssh.state }}"
+    key: "{{ item }}"
+  with_file:
+  - /home/jamoliddin/ansible/lesson-1/ansible-udevs-servers.pub

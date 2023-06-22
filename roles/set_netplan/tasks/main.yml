@@ -1,5 +1,0 @@
----
-- name: Create netplan config files
-  template:
-    src: 40-additional.yaml.j2
-    dest: /etc/netplan/40-additional.yaml

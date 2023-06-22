@@ -1,0 +1,23 @@
+---
+# tasks file for roles/jamol/sshd_conf
+
+- name: Close root access via SSH
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^#PermitRootLogin'
+    line: PermitRootLogin no
+  notify: restart_sshd
+
+- name: Change SSH Port
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^#Port'
+    line: Port {{ sshd.port }}
+  notify: restart_sshd
+
+- name: Close Password authentification
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: '^#PasswordAuthentication'
+    line: PasswordAuthentication no
+  notify: restart_sshd
